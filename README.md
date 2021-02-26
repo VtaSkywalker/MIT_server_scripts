@@ -1,1 +1,3 @@
 # MIT_server_scripts
+
+MIT基岩版国际服务器的开服相关代码编辑处
