@@ -23,7 +23,7 @@ def printResult(): # 打印排行榜
         print("=" * 10)
         print("排名：%d" % rank)
         print("id：%s" % eachEle[0])
-        print("挖掘数：%d" % eachEle[1])
+        print("放置数：%d" % eachEle[1])
         rank += 1
     print("=" * 10)
 
