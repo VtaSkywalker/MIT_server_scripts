@@ -1,5 +1,5 @@
 import re
-from constants import *
+# from constants import *
 
 placeDic = {}
 
@@ -35,7 +35,7 @@ def printAndGetResult(): # 打印排行榜
     return resultList
 
 # 计算部分
-def calculate():
+def calculate(LOG_FILE_NAME):
     file = open(LOG_FILE_NAME, "r")
     for eachLine in file:
         matchRes = re.search("玩家.*放置", eachLine) # 匹配放置子句
