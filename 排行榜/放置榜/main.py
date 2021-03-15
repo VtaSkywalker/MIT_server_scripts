@@ -27,7 +27,7 @@ def printResult(): # 打印排行榜
         rank += 1
     print("=" * 10)
 
-file = open("2021_3_5.log", "r")
+file = open("2021_3_14.log", "r")
 for eachLine in file:
     matchRes = re.search("玩家.*放置", eachLine) # 匹配放置子句
     if(matchRes): # 匹配成功
