@@ -1,3 +1,4 @@
+# 用于测试图片发送的脚本，by随机
 import win32gui
 import win32con
 import win32clipboard
