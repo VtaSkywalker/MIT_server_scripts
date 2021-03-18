@@ -43,7 +43,7 @@ class CSendQQMsg():
 
 
 def send(msg, imgPath):
-    friendName = '啊这什么随机名字'
+    friendName = 'MIT 国际服（内服）'
     qq = CSendQQMsg(friendName, msg)
     qq.sendmsg()
     print("文字发送完成！")
