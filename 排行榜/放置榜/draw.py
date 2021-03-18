@@ -67,3 +67,4 @@ def draw(resultList, LOG_FILE_NAME):
     # cv2.waitKey()
     cv2.imwrite("temp.jpg", img)
     os.rename("temp.jpg", OUTPUT_FILE_NAME) # 改名
+    return OUTPUT_FILE_NAME

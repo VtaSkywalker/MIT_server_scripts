@@ -9,6 +9,6 @@ fileList = sorted(fileList, key=lambda x : os.path.getmtime(os.path.join(logPath
 print(fileList[-2]) # 获取最近一天的
 shutil.copy(logPath + "/" + fileList[-2], "./" + fileList[-2])
 file = open("temp.bat", "w")
-file.write("python main.py %s\ncmd /k" % (fileList[-2]))
+file.write("python main.py %s" % (fileList[-2]))
 file.close()
 os.system("temp.bat")

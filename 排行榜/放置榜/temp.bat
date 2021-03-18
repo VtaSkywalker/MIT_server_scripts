@@ -1,2 +1,1 @@
-python main.py 2021_3_13.log
-cmd /k
+python main.py 2021_3_16.log

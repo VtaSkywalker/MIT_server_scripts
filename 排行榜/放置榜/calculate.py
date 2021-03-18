@@ -47,4 +47,25 @@ def calculate(LOG_FILE_NAME):
         playerID = placeSubSen.split(" ")[1]
         playerPlaceUpdate(playerID)
     resultList = printAndGetResult()
-    return resultList
+    msg = convert2Msg(resultList, LOG_FILE_NAME)
+    return [resultList, msg]
+
+# 将结果以文字形式呈现
+def convert2Msg(resultList, LOG_FILE_NAME):
+    dateOnly = LOG_FILE_NAME.split(".")[0] # 仅包含日期的部分
+    yyyy = dateOnly.split("_")[0]
+    mm = dateOnly.split("_")[1]
+    dd = dateOnly.split("_")[2]
+    msg = ""
+    msg += "%04d年%02d月%02d日——挖掘榜：\n" % (int(yyyy), int(mm), int(dd))
+    rank = 1
+    for eachEle in resultList:
+        msg += "=" * 10
+        msg += "\n"
+        msg += "排名：%d\n" % rank
+        msg += "id：%s\n" % eachEle[0]
+        msg += "放置数：%d\n" % eachEle[1]
+        rank += 1
+    msg += "=" * 10
+    msg += "\n"
+    return msg
